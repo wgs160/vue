@@ -415,6 +415,7 @@
 	        sortparam:'',
 	        order:1,
 	        curPage:1,
+	        maxLen:3,
 	        goods:list_data.goods
 	    },
 	    methods:{
@@ -431,8 +432,7 @@
 	    },
 	    computed:{
 	        pageLen: function () {
-	            var maxLen = 3;
-	            var pageNum = Math.ceil(this.goods.length/maxLen);
+	            var pageNum = Math.ceil(this.goods.length/this.maxLen);
 	            var array = [];
 	            for (var i = 0; i < pageNum; i++) {
 	                array.push(i+1);

@@ -50,7 +50,7 @@
             <tbody>
 
             <template v-for="good in goods | orderBy sortparam order">
-                <tr   >
+                <tr v-show="$index >= (curPage - 1) * maxLen && $index < curPage * maxLen">
                     <td>{{good.no}}</th>
                     <td>{{good.name}}</td>
                     <td>{{good.price}}</td>
