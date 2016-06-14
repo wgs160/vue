@@ -1,4 +1,4 @@
-/*! This file is created by qgn at 2016-06-14 15:37:57 */
+/*! This file is created by qgn at 2016-06-15 00:08:17 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -406,7 +406,9 @@
 	/**
 	 * Created by ning on 2015/2/6.
 	 */
-	var list_data = __webpack_require__(7);
+	var list_data = __webpack_require__(6);
+	__webpack_require__(7);
+
 
 	var vm = new Vue({
 	    el:'#app',
@@ -415,7 +417,7 @@
 	        sortparam:'',
 	        order:1,
 	        curPage:1,
-	        maxLen:3,
+	        maxLen:4,
 	        goods:list_data.goods
 	    },
 	    methods:{
@@ -444,8 +446,7 @@
 
 
 /***/ },
-/* 6 */,
-/* 7 */
+/* 6 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -494,9 +495,41 @@
 				"no": 3,
 				"name": "西瓜",
 				"price": "33"
+			},
+			{
+				"no": 3,
+				"name": "西瓜",
+				"price": "33"
+			},
+			{
+				"no": 1,
+				"name": "苹果",
+				"price": "50"
+			},
+			{
+				"no": 2,
+				"name": "波拿拿",
+				"price": "22"
+			},
+			{
+				"no": 3,
+				"name": "西瓜",
+				"price": "33"
 			}
 		]
 	};
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	/**
+	 * Created by qiuguanning on 2016/6/15.
+	 */
+	//分页显示行判断
+	Vue.filter('isShowLine', function (index,curPage,maxLen) {
+	    return index >= (curPage - 1) * maxLen && index < curPage * maxLen;
+	})
 
 /***/ }
 /******/ ]);

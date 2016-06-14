@@ -3,6 +3,8 @@
  */
 var list_data = require("./goods.json");
 
+require("./filter.js");
+
 var vm = new Vue({
     el:'#app',
     data: {
@@ -10,7 +12,7 @@ var vm = new Vue({
         sortparam:'',
         order:1,
         curPage:1,
-        maxLen:3,
+        maxLen:4,
         goods:list_data.goods
     },
     methods:{
