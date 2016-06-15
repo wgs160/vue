@@ -20,20 +20,23 @@
 
 <div id="app" class="wrapper">
 
-    <div class="bs_block">
-        <p class="h2">数据绑定</p>
-        <div>{{message}}</div>
-        <input type="text" v-model="message">
-        <p>特性</p>
-        <p>lazy:change事件触发</p>
-        <p>number:转化为number</p>
-        <p>debounce:设置同步限时（毫秒）</p>
-    </div>
+    <app></app>
 
     <div class="bs_block">
-        <p class="h2">过度</p>
+        <p class="h2">组件</p>
 
-        <p>待补充</p>
+        <p class="h3">prop</p>
+        <p>父级数据传递到组件</p>
+        <p>驼峰写法要成小横杠连接</p>
+        <my-component msg="9999"></my-component>
+
+        <p class="h3">动态Props</p>
+        <input v-model="parentMsg">
+        <br>
+        <child :my-message="parentMsg"></child>
+
+        <p class="h3">自定义事件,动态组件</p>
+        <a href="component.html" target="_blank">点我</a>
     </div>
 
     <div class="bs_block">

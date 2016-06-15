@@ -3,7 +3,7 @@
  */
 var webpack = require('webpack')
 module.exports = {
-    entry: "./src/js/entry.js",
+    entry: "./src/entry.js",
     output: {
         path: "build/js",
         filename: "bundle.js"
@@ -11,7 +11,11 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" },
-            { test: /\.json$/, loader: "json" }
+            { test: /\.json$/, loader: "json" },
+            {
+                test: /\.vue$/,
+                loader: 'vue'
+            }
 
         ]
     },
