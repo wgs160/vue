@@ -16,7 +16,6 @@ module.exports = {
                 test: /\.vue$/,
                 loader: 'vue'
             }
-
         ]
     },
     plugins: [

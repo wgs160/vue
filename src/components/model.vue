@@ -1,19 +1,20 @@
 <template>
     <div class="bs_block">
-        <p class="h2">Êı¾İ°ó¶¨</p>
+        <p class="h2">æ•°æ®ç»‘å®š</p>
+        <p>è¿™æ˜¯ç»„ä»¶åŠ è½½è¿›æ¥çš„</p>
         <div>{{message}}</div>
         <input type="text" v-model="message">
-        <p>ÌØĞÔ</p>
-        <p>lazy:changeÊÂ¼ş´¥·¢</p>
-        <p>number:×ª»¯Îªnumber</p>
-        <p>debounce:ÉèÖÃÍ¬²½ÏŞÊ±£¨ºÁÃë£©</p>
+        <p>ç‰¹æ€§</p>
+        <p>lazy:changeäº‹ä»¶è§¦å‘</p>
+        <p>number:è½¬åŒ–ä¸ºnumber</p>
+        <p>debounce:è®¾ç½®åŒæ­¥é™æ—¶ï¼ˆæ¯«ç§’ï¼‰</p>
     </div>
 </template>
 
 <script>
     module.exports = {
-        data:{
-            message:'hello vue.js.'
+        data: function () {
+            return {message:'hello vue.js.'}
         }
     }
 </script>

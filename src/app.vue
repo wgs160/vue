@@ -1,17 +1,21 @@
 <template>
     <moo></moo>
+    <zujian></zujian>
+    <my-table></my-table>
 </template>
 
 <script>
-    var m = require("./components/model.vue");
+    var moo = require("./components/model.vue");
+    var zujian = require("./components/zujian.vue");
+    var table = require("./components/table.vue");
 
     module.exports = {
         components:{
-            moo:m
+            "moo":moo,
+            "zujian":zujian,
+            "myTable":table
         }
     }
-
-
 </script>
 
 <style>

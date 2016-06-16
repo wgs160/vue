@@ -19,59 +19,7 @@
 <body>
 
 <div id="app" class="wrapper">
-
     <app></app>
-
-    <div class="bs_block">
-        <p class="h2">组件</p>
-
-        <p class="h3">prop</p>
-        <p>父级数据传递到组件</p>
-        <p>驼峰写法要成小横杠连接</p>
-        <my-component msg="9999"></my-component>
-
-        <p class="h3">动态Props</p>
-        <input v-model="parentMsg">
-        <br>
-        <child :my-message="parentMsg"></child>
-
-        <p class="h3">自定义事件,动态组件</p>
-        <a href="component.html" target="_blank">点我</a>
-    </div>
-
-    <div class="bs_block">
-        <p class="h2">表格</p>
-        <table class="table table-striped table-bordered">
-            <thead>
-            <tr>
-                <th @click="sort('no')" >商品编号</th>
-                <th>商品名称</th>
-                <th  @click="sort('price')">价格</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <tbody>
-
-            <template v-for="good in goods | orderBy sortparam order">
-                <tr v-show="$index | isShowLine curPage maxLen">
-                    <td>{{good.no}}</th>
-                    <td>{{good.name}}</td>
-                    <td>{{good.price}}</td>
-                    <td><a @click="remove(good)" href="javascript:void 0" class="btn btn-danger">删除</a></td>
-                </tr>
-            </template>
-
-            </tbody>
-        </table>
-        <nav>
-            <ul class="pagination">
-                <template v-for="page in pageLen">
-                    <li :class="{'active': curPage == page }"><a  @click="pageGo(page)" href="javascript:void  0">{{page}}</a></li>
-                </template>
-            </ul>
-        </nav>
-    </div>
-
 </div>
 
 <script src="//cdn.bootcss.com/vue/1.0.24/vue.js"></script>
