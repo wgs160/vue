@@ -31,6 +31,7 @@
         <!-- 父组件模板 -->
         <div id="events-example">
             <p>Messages: {{ messages | json }}</p>
+            <!--触发事件时执行方法-->
             <child v-on:child-msg="handleIt"></child>
         </div>
     </div>
@@ -67,6 +68,7 @@
         methods: {
             notify: function () {
                 if (this.msg.trim()) {
+                    //触发child-msg 事件
                     this.$dispatch('child-msg', this.msg)
                     this.msg = ''
                 }
@@ -94,16 +96,15 @@
             }
         },
         methods:{
-            handleIt: function () {
-
+            handleIt: function (msg) {
+                this.messages.push(msg)
             }
         },
         // 在创建实例时 `events` 选项简单地调用 `$on`
         events: {
-            'child-msg': function (msg) {
+          /*  'child-msg': function (msg) {
                 // 事件回调内的 `this` 自动绑定到注册它的实例上
-                this.messages.push(msg)
-            }
+            }*/
         }
     })
 </script>
