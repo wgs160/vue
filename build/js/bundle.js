@@ -49,7 +49,18 @@
 	 * Created by 15031493 on 2016/6/14.
 	 */
 	__webpack_require__(1);
-	__webpack_require__(5);
+	__webpack_require__(6);
+
+	var components = __webpack_require__(7);
+
+	var vm = new Vue({
+	    el:'#app',
+	    components:{
+	        app:components
+	    },
+	    data: {
+	    }
+	});
 
 /***/ },
 /* 1 */
@@ -400,33 +411,13 @@
 
 
 /***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Created by ning on 2015/2/6.
-	 */
-
-	__webpack_require__(6);
-
-	var components = __webpack_require__(7);
-
-	var vm = new Vue({
-	    el:'#app',
-	    components:{
-	        app:components
-	    },
-	    data: {
-	    }
-	});
-
-
-/***/ },
+/* 5 */,
 /* 6 */
 /***/ function(module, exports) {
 
 	/**
 	 * Created by qiuguanning on 2016/6/15.
+	 * 自定义拦截器
 	 */
 	//分页显示行判断
 	Vue.filter('isShowLine', function (index,curPage,maxLen) {

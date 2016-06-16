@@ -1,5 +1,16 @@
 #vue+webpack打包模块化组件实例，没用到babel和es6的版本
 
+#目录结构
+
+* build:打包后的文件
+* src:源文件
+    * components：组件
+    * css：样式
+    * data：json模拟数据包
+    * js：全局的工具类，拦截器等..
+    * app.vue：主组件的加载
+    * entry.js：打包入口和主vue实例
+
 #运行 (用这个)
 webpack --progress --colors --watch
 
